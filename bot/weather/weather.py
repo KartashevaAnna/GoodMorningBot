@@ -13,14 +13,9 @@ async def get_openweather_response(message) -> str:
     lon = float(df["lon"])
     url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPEN_WEATHER_API_KEY}&units=metric"
     async with aiohttp.ClientSession() as session:
-        print("first level")
         async with session.get(url) as response:
-            print("second")
             response_text = await response.text()
-            print(response_text)
             weather_dict = json.loads(response_text)
-            print(f"response dict is {weather_dict}")
-            print(f"response type dict is{type(weather_dict)} ")
             main_weather = weather_dict["weather"][0]["main"]
             description = weather_dict["weather"][0]["description"]
             temperature = weather_dict["main"]["temp"]
@@ -38,7 +33,6 @@ async def get_openweather_response(message) -> str:
                 f"Humidity: {humidity}\n"
                 f"Wind speed: {wind_speed}"
             )
-            print("weather report ", weather_report)
             await message.answer(weather_report)
 
 

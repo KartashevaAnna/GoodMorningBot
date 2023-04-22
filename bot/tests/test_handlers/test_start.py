@@ -1,9 +1,7 @@
 import pytest
 from unittest.mock import AsyncMock
-from aiogram.types import ReplyKeyboardRemove, ReplyKeyboardMarkup, KeyboardButton
-from bot.goodmorningbot import show_all_commands, HELP_COMMAND
-from bot.tmp import command_start, HELP_COMMAND
-
+from aiogram.types import ReplyKeyboardMarkup
+from tmp.simple_vote import command_start
 
 # @pytest.mark.asyncio
 # async def test_start_handler():

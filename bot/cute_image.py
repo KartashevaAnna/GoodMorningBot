@@ -1,6 +1,6 @@
 import requests
 from aiogram import types
-from config import dp, bot
+from botconfig import dp, bot
 
 
 @dp.message_handler(commands=["image"])

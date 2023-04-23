@@ -6,14 +6,11 @@ from keyboards.keyboards import meny_keyboard
 
 
 HELP_COMMAND = """
-<b>/help</b> - <em>список комманд</em>
-<b>/start</b> - <em>начать работу с ботом</em>
-<b>/image</b> - <em>получить изображение котика</em>
-<b>/weather</b> - <em>узнать погоду</em>
-<b>/vote</b> - <em>проголосать  за фото </em>
-
-Чтобы вызвать клавиатуру с командами, наберите <b>/start</b>.
-
+<b>/help</b> - <em>Cписок команд</em>
+<b>/start</b> - <em>Вызвать основное меню</em>
+<b>/image</b> - <em>Получить изображение котика</em>
+<b>/weather</b> - <em>Узнать погоду.</em> Пример: <b>Weather Moscow</b>
+<b>/convert</b> - <em>Конвертировать валюту.</em> Пример: <b>/convert 100 RUB EUR</b>
 """
 
 

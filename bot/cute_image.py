@@ -1,12 +1,16 @@
 import requests
 from aiogram import types
-from botconfig import dp, bot
+from botconfig import dp, bot, logger
 
 
 @dp.message_handler(commands=["image"])
 async def send_cat_image(message: types.Message):
-    random_cat_url = await get_random_cat()
-    await bot.send_photo(message.from_user.id, photo=random_cat_url)
+    try:
+        random_cat_url = await get_random_cat()
+        await bot.send_photo(message.from_user.id, photo=random_cat_url)
+    except Exception as error:
+        logger.exception(error)
+        bot.send_message(message.from_user.id, text="API не отвечает.")
     await message.delete()
 
 

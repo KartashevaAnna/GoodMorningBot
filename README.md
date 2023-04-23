@@ -1,5 +1,5 @@
 # GoodMorningBot
-##Бот:
+## Бот:
 1. Получает от пользователя город и показывает погоду в нем (API: https://openweathermap.org/).
 2. Конвертирует валюты (API: https://free.currencyconverterapi.com/).
 3. Отправляет случайную картинку с милыми животными (API: https://api.thecatapi.com/).
